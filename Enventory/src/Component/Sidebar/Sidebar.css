@@ -1,0 +1,46 @@
+.sidebar {
+    background-color: #1c2b39; /* Dark blue/navy background */
+    width: auto;
+    height: 100vh;
+    position: fixed;
+    padding-top: 0px;
+    flex-direction: column;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .sidebar ul li.active {
+    background-color: #20b486; /* Light green/teal for active item */
+    padding: 20px 20px;
+    font-size: 18px;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #333;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li i {
+    margin-right: 5px;
+    font-size: 30px;
+  }
+  
+
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 75px;
+    }
+
+    .sidebar ul li span {
+      display: none;
+    }
+  }

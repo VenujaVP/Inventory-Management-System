@@ -1,0 +1,84 @@
+/* App.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .content-wrapper {
+    display: flex;
+    position: relative;
+    flex: 1; /* Take remaining space */
+  }
+  
+  .navbar {
+    background-color: #1c2b39; /* Dark blue/navy */
+    color: white;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar {
+    background-color: #1c2b39; /* Dark blue/navy */
+    color: white;
+    width: auto;
+    height: 100%;
+    position: fixed;
+    top: 48px; /* Adjust based on Navbar height */
+    bottom: 0;
+    overflow-y: auto; /* Scroll if content overflows */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 0px;
+    margin-left: 0px; /* Space for sidebar */
+    transition: margin-left 0.3s ease; /* Smooth transition */
+  }
+  
+  .main-content.with-sidebar {
+    margin-left: 210px; /* Adjust for the sidebar */
+    margin-right: 0px; /* Adjust for the sidebar */
+  }
+  
+  .footer {
+    background-color: #1c2b39; /* Dark blue/navy */
+    color: white;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 75px;
+      position: relative;
+      top:  48px;
+      bottom: auto;
+      height: auto;
+    }
+  
+    .sidebar.show {
+      transform: translateX(0); /* Slide in */
+    }
+  
+    .main-content {
+      margin-left: 0;
+      padding: 0px;
+    }
+
+    .main-content.with-sidebar {
+      margin-left: 75px; /* Adjust for the sidebar */
+      margin-right: 0px;
+    }
+  }
+  

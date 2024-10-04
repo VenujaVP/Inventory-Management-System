@@ -1,0 +1,25 @@
+.navbar {
+    background-color: #008080; /* Teal background */
+    padding: 10px 20px;
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 48px;
+  }
+  
+  .navbar .brand {
+    color: white; /* White text for the brand */
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar .welcome {
+    color: black; /* Black text for the welcome message */
+  }
+  
+  .navbar .logout {
+    color: black; /* Black text for the logout button */
+    cursor: pointer;
+  }
+  
